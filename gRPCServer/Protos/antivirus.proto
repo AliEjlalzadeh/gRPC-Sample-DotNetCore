@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPCServer.Protos";
+
+
+service AntiVirus{
+	rpc GetAllAsync (.AntiVirusRequest) returns (stream .AntiVirusResponse);
+}
+
+
+message AntiVirusRequest{
+
+}
+
+
+message AntiVirusResponse{
+	string Name=1;
+	string OS=2;
+}
